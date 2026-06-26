@@ -32,7 +32,7 @@ const MODEL_MAPPING = {
 };
 
 // Root endpoint for compatibility with apps that ping /
-app.get('/', (req, res) => {
+app.all('/', (req, res) => {
   res.json({ status: 'ok', message: 'OpenAI to NVIDIA NIM Proxy' });
 });
 
